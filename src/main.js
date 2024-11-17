@@ -56,7 +56,8 @@ async function onSearch(e) {
             message: `Found ${totalHits} images!`,
         });
 
-        lightbox.refresh(); // Оновлення галереї
+        lightbox.refresh();
+        form.elements.searchQuery.value = '';
     } catch (error) {
         iziToast.error({ title: 'Error', message: 'Something went wrong!' });
     } finally {
