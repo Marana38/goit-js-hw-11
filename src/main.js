@@ -1,8 +1,9 @@
 import { fetchImages } from './js/pixabay-api';
 import { createImageMarkup } from './js/render-functions';
 import SimpleLightbox from 'simplelightbox';
-import iziToast from 'izitoast';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 let query = '';
 let page = 1;
@@ -11,6 +12,14 @@ const perPage = 40;
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
+
+let lightbox = new SimpleLightbox('.gallery a'); // Ініціалізація SimpleLightbox
+
+// Налаштування iziToast
+iziToast.settings({
+    position: 'topRight',
+    timeout: 5000,
+});
 
 form.addEventListener('submit', onSearch);
 
@@ -47,8 +56,7 @@ async function onSearch(e) {
             message: `Found ${totalHits} images!`,
         });
 
-        const lightbox = new SimpleLightbox('.gallery a');
-        lightbox.refresh();
+        lightbox.refresh(); // Оновлення галереї
     } catch (error) {
         iziToast.error({ title: 'Error', message: 'Something went wrong!' });
     } finally {
@@ -57,9 +65,9 @@ async function onSearch(e) {
 }
 
 function showLoader() {
-    loader.style.display = 'block';
+    loader.classList.remove('hidden');
 }
 
 function hideLoader() {
-    loader.style.display = 'none';
+    loader.classList.add('hidden');
 }
