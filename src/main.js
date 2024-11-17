@@ -13,9 +13,8 @@ const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 
-let lightbox = new SimpleLightbox('.gallery a'); // Ініціалізація SimpleLightbox
+let lightbox = new SimpleLightbox('.gallery a');
 
-// Налаштування iziToast
 iziToast.settings({
     position: 'topRight',
     timeout: 5000,
