@@ -57,10 +57,10 @@ async function onSearch(e) {
         });
 
         lightbox.refresh();
-        form.elements.searchQuery.value = '';
     } catch (error) {
         iziToast.error({ title: 'Error', message: 'Something went wrong!' });
     } finally {
+        form.elements.searchQuery.value = '';
         hideLoader();
     }
 }
