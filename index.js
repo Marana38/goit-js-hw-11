@@ -4,10 +4,10 @@
           <img src="${t}" alt="${i}" loading="lazy" />
         </a>
         <div class="info">
-          <p><b>Likes</b>: ${e}</p>
-          <p><b>Views</b>: ${r}</p>
-          <p><b>Comments</b>: ${a}</p>
-          <p><b>Downloads</b>: ${f}</p>
+          <p><b>Likes</b> ${e}</p>
+          <p><b>Views</b> ${r}</p>
+          <p><b>Comments</b> ${a}</p>
+          <p><b>Downloads</b> ${f}</p>
           
         </div>
       </div>
