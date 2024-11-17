@@ -23,16 +23,74 @@ body {
   padding: 0;
 }
 
+#search-form {
+  display: flex;
+  margin-top: 36px;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+input {
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding-left: 16px;
+
+}
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.photo-card {
+  border: 1px solid #808080;
+  background: url("path_to_image");
+  border-radius: 8px;
 }
 
 .photo-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 360px;
+  height: 200px;
+
+}
+
+.info {
+  margin-top: 8px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loader {
